@@ -1,0 +1,27 @@
+/netlify/*  /404.html  404
+/tools/*  /404.html  404
+
+# .html twins retired
+/index.html  /  301!
+/our-projects.html  /our-projects  301!
+/commercial-fitouts-sydney.html  /commercial-fitouts-sydney  301!
+/fitout-cost.html  /fitout-cost  301!
+/about.html  /about  301!
+/contact.html  /contact  301!
+/office-fitouts-sydney.html  /office-fitouts-sydney  301!
+/retail-fitouts-sydney.html  /retail-fitouts-sydney  301!
+/cafe-restaurant-fitouts-sydney.html  /cafe-restaurant-fitouts-sydney  301!
+/medical-fitouts-sydney.html  /medical-fitouts-sydney  301!
+/childcare-fitouts-sydney.html  /childcare-fitouts-sydney  301!
+
+/thanks  /thanks.html  200
+/our-projects  /our-projects.html  200
+/commercial-fitouts-sydney  /commercial-fitouts-sydney.html  200
+/fitout-cost  /fitout-cost.html  200
+/about  /about.html  200
+/contact  /contact.html  200
+/office-fitouts-sydney  /office-fitouts-sydney.html  200
+/retail-fitouts-sydney  /retail-fitouts-sydney.html  200
+/cafe-restaurant-fitouts-sydney  /cafe-restaurant-fitouts-sydney.html  200
+/medical-fitouts-sydney  /medical-fitouts-sydney.html  200
+/childcare-fitouts-sydney  /childcare-fitouts-sydney.html  200
