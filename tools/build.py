@@ -8,8 +8,8 @@ PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
 PHONE2 = "0450 084 175"; PHONE2_TEL = "0450084175"
 EMAIL = "info@cityfitouts.com.au"
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");</script>'
-ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M2 4h26v26z' fill='%231E2C4F'/%3E%3Cpath d='M31 4h15v15z' fill='%231E2C4F'/%3E%3Cpath d='M31 23h15v23z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
-LOGO = """<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M2 4h26v26z" fill="#1E2C4F"/><path d="M31 4h15v15z" fill="#1E2C4F"/><path d="M31 23h15v23z" fill="#1E2C4F"/></svg>"""
+ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M1 1h22v22zM25 1h22v22zM25 25h22v22z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
+LOGO = """<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M1 1h22v22zM25 1h22v22zM25 25h22v22z" fill="#1E2C4F"/></svg>"""
 
 PAGES = [  # (file, clean url, title, description)
     ("index.html", "/", "City Fitouts - Commercial builders and fitout contractors, Sydney",
