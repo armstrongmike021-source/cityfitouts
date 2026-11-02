@@ -50,7 +50,7 @@ def head(title, desc, url, extra=""):
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/"><img class="elogo" src="/images/estier-logo.png" alt="Estier" width="720" height="466"><b>City Fitouts</b></a>
+    <a class="brand" href="/"><img class="elogo" src="/images/estier-mark.png" alt="" width="145" height="240"><b>City Fitouts</b></a>
     <nav><a href="/commercial-fitouts-sydney">Fitouts</a><a href="/our-projects">Projects</a><a href="/fitout-cost">Cost</a><a href="/about">About</a><a href="/contact">Contact</a><a class="cta" href="/contact">Get a fixed price</a></nav>
   </header>
 """
@@ -378,7 +378,7 @@ CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney 
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
 .btn.amber{background:var(--navy)}
-header.top .brand b{font-size:30px}.brand .elogo{height:68px;width:auto;display:block;margin-right:6px}@media(max-width:600px){.brand .elogo{height:42px}}
+header.top .brand b{font-size:30px}.brand .elogo{height:44px;width:auto;display:block;margin-right:4px}@media(max-width:600px){.brand .elogo{height:34px}}
 .hero{padding:30px 0 10px}.hero h1{max-width:760px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:820px){.steps,.steps.four{grid-template-columns:1fr}}
