@@ -8,8 +8,8 @@ PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
 PHONE2 = "0450 084 175"; PHONE2_TEL = "0450084175"
 EMAIL = "info@cityfitouts.com.au"
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");</script>'
-ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath d='M1 1h22v22zM25 1h22v22zM25 25h22v22z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
-LOGO = """<svg viewBox="0 0 48 48" aria-hidden="true"><path d="M1 1h22v22zM25 1h22v22zM25 25h22v22z" fill="#1E2C4F"/></svg>"""
+ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-314 0 1603 1603'%3E%3Cpath d='M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
+LOGO = """<svg viewBox="0 0 975 1603" aria-hidden="true"><path d="M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z" fill="#1E2C4F"/></svg>"""   # the Estier mark (three triangles) - City Fitouts is an Estier brand (Mike, 3 Nov 2026)
 
 PAGES = [  # (file, clean url, title, description)
     ("index.html", "/", "City Fitouts - Commercial builders and fitout contractors, Sydney",
@@ -378,7 +378,7 @@ CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney 
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
 .btn.amber{background:var(--navy)}
-header.top .brand b{font-size:30px;line-height:27px;display:block;margin-top:-3px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:48px;height:48px;flex:none}
+header.top .brand b{font-size:30px;line-height:27px;display:block;margin-top:-3px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:46px;flex:none}
 .hero{padding:30px 0 10px}.hero h1{max-width:760px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:820px){.steps,.steps.four{grid-template-columns:1fr}}
