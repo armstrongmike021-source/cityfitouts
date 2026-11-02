@@ -373,7 +373,7 @@ THANKS = f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta
 
 CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney Fitouts). Navy only - no amber accent. */
 :root{--amber:#1E2C4F}
-.kick{color:var(--navy)}
+.kick{color:var(--navy);margin-bottom:22px}
 .textlink{color:var(--navy)}
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
