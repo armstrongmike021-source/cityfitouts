@@ -75,6 +75,7 @@
           <button class="opt" data-v="hospo">Cafe or restaurant</button>
           <button class="opt" data-v="foodcourt">Food court tenancy</button>
           <button class="opt" data-v="pharmacy">Pharmacy</button>
+          <button class="opt" data-v="gym">Gym or fitness studio</button>
           <button class="opt" data-v="medical">Medical or dental</button>
           <button class="opt" data-v="childcare">Childcare centre</button>
         </div></div>
@@ -123,7 +124,7 @@
       <label for="email">Email</label><input id="email" name="email" type="email" required>
       <label for="address">Site address or suburb</label><input id="address" name="address" required>
       <label for="ptype">Type of project</label>
-      <select id="ptype" name="project_type"><option>Office fitout</option><option>Retail fitout</option><option>Cafe or restaurant fitout</option><option>Food court tenancy fitout</option><option>Pharmacy fitout</option><option>Medical or dental fitout</option><option>Childcare centre</option><option>Alterations or refurbishment</option><option>Make-good</option><option>Something else</option></select>
+      <select id="ptype" name="project_type"><option>Office fitout</option><option>Retail fitout</option><option>Cafe or restaurant fitout</option><option>Food court tenancy fitout</option><option>Pharmacy fitout</option><option>Gym or fitness studio fitout</option><option>Medical or dental fitout</option><option>Childcare centre</option><option>Alterations or refurbishment</option><option>Make-good</option><option>Something else</option></select>
       <label for="notes">Tell us about the job (optional)</label><textarea id="notes" name="notes" rows="4"></textarea>
       <label>Photos of the space (optional, up to 3, 8 MB each)</label>
       <div class="two" style="grid-template-columns:1fr 1fr 1fr"><input type="file" name="photo1" accept="image/*"><input type="file" name="photo2" accept="image/*"><input type="file" name="photo3" accept="image/*"></div>
@@ -147,9 +148,9 @@
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"City Fitouts","url":"https://cityfitouts.com.au/","telephone":"+61 0411 250 058","email":"info@cityfitouts.com.au","image":"https://cityfitouts.com.au/images/ricketty-street-mascot.jpg","areaServed":"Sydney, NSW","address":{"@type":"PostalAddress","streetAddress":"6 Ossary Street","addressLocality":"Mascot","addressRegion":"NSW","postalCode":"2020","addressCountry":"AU"},"description":"Commercial builders and fitout contractors in Sydney: offices, retail, hospitality, medical and childcare fitouts, alterations and refurbishments."}</script>
 
 <script>
-const RATES={office:{basic:[1200,1800],mid:[1800,2500],premium:[2500,3500]},retail:{basic:[1000,1500],mid:[1500,2200],premium:[2200,3200]},hospo:{basic:[2500,3200],mid:[3200,4000],premium:[4000,5500]},foodcourt:{basic:[4000,5000],mid:[5000,6000],premium:[6000,7500]},pharmacy:{basic:[1800,2400],mid:[2400,3200],premium:[3200,4200]},medical:{basic:[2200,2800],mid:[2800,3500],premium:[3500,4500]},childcare:{basic:[2000,2600],mid:[2600,3300],premium:[3300,4200]}};
-const WEEKS={office:{basic:[4,6],mid:[6,9],premium:[9,14]},retail:{basic:[3,5],mid:[5,8],premium:[8,12]},hospo:{basic:[6,9],mid:[9,13],premium:[12,18]},foodcourt:{basic:[6,8],mid:[8,10],premium:[10,14]},pharmacy:{basic:[4,6],mid:[6,8],premium:[8,12]},medical:{basic:[8,10],mid:[10,14],premium:[14,20]},childcare:{basic:[10,14],mid:[14,18],premium:[18,24]}};
-const LABEL={office:'Office',retail:'Retail shop',hospo:'Cafe or restaurant',foodcourt:'Food court tenancy',pharmacy:'Pharmacy',medical:'Medical or dental',childcare:'Childcare centre',basic:'Basic',mid:'Mid',premium:'Premium',same:'Same use',new:'New use'};
+const RATES={office:{basic:[1200,1800],mid:[1800,2500],premium:[2500,3500]},retail:{basic:[1000,1500],mid:[1500,2200],premium:[2200,3200]},hospo:{basic:[2500,3200],mid:[3200,4000],premium:[4000,5500]},foodcourt:{basic:[4000,5000],mid:[5000,6000],premium:[6000,7500]},pharmacy:{basic:[1800,2400],mid:[2400,3200],premium:[3200,4200]},gym:{basic:[1200,1800],mid:[1800,2500],premium:[2500,3500]},medical:{basic:[2200,2800],mid:[2800,3500],premium:[3500,4500]},childcare:{basic:[2000,2600],mid:[2600,3300],premium:[3300,4200]}};
+const WEEKS={office:{basic:[4,6],mid:[6,9],premium:[9,14]},retail:{basic:[3,5],mid:[5,8],premium:[8,12]},hospo:{basic:[6,9],mid:[9,13],premium:[12,18]},foodcourt:{basic:[6,8],mid:[8,10],premium:[10,14]},pharmacy:{basic:[4,6],mid:[6,8],premium:[8,12]},gym:{basic:[5,7],mid:[7,10],premium:[10,14]},medical:{basic:[8,10],mid:[10,14],premium:[14,20]},childcare:{basic:[10,14],mid:[14,18],premium:[18,24]}};
+const LABEL={office:'Office',retail:'Retail shop',hospo:'Cafe or restaurant',foodcourt:'Food court tenancy',pharmacy:'Pharmacy',gym:'Gym or fitness studio',medical:'Medical or dental',childcare:'Childcare centre',basic:'Basic',mid:'Mid',premium:'Premium',same:'Same use',new:'New use'};
 const APPR={
  exempt:['Likely exempt development','Internal, non-structural work in a commercial building usually needs no council approval under the NSW Codes SEPP. Fire and electrical work still needs certification.'],
  cdc:['Complying development (CDC)','A private certifier can approve internal alterations, shopfronts and many changes of use in about 2-4 weeks, without a DA. Food premises also need council registration.'],
@@ -166,7 +167,7 @@ function calc(){
   let k='exempt';
   if(her||(S.type==='medical'&&S.use==='new')||(S.type==='childcare'&&S.use==='new')) k='da';
   else if(S.type==='childcare') k='cdc';
-  else if(S.use==='new'||S.type==='hospo'||S.type==='foodcourt'||S.grade==='premium') k='cdc';
+  else if(S.type==='gym'||S.use==='new'||S.type==='hospo'||S.type==='foodcourt'||S.grade==='premium') k='cdc';
   const A={exempt:.015,cdc:.03,da:.06}[k];
   const div=1+D+A;
   const con=[clo/div,chi/div], des=[con[0]*D,con[1]*D], app=[con[0]*A,con[1]*A];
