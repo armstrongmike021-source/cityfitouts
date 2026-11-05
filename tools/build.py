@@ -51,7 +51,7 @@ def head(title, desc, url, extra=""):
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/">{LOGO}<b>City<br>Fitouts</b></a>
-    <nav><a href="/commercial-fitouts-sydney">Fitouts</a><a href="/our-projects">Projects</a><a href="/fitout-cost">Cost Calculator</a><a href="/about">About</a><a href="/contact">Contact</a><a class="cta" href="/contact">Get a fixed price</a></nav>
+    <nav><a href="/commercial-fitouts-sydney">Fitouts</a><a href="/our-projects">Projects</a><a href="/fitout-cost">Cost Calculator</a><a href="/about">About</a><a href="/contact">Contact</a><a class="cta" href="/fitout-cost#calc">Get a fixed price</a></nav>
   </header>
 """
 
@@ -120,7 +120,7 @@ CALC = """
       <div class="row"><span>Program on site</span><b id="weeks">4 - 6 weeks</b></div>
       <div class="appr" id="appr"><b>Likely exempt development</b><span>Internal, non-structural work in a commercial building usually needs no council approval under the NSW Codes SEPP. Fire and electrical work still needs certification.</span></div>
       <div class="fine">Ranges based on Sydney design-and-construct pricing, 2026, excluding GST, base-building works, furniture and loose equipment. <span id="splitNote"></span> Every site is different - a fixed price needs a walk-through.</div>
-      <p style="margin:16px 0 0"><a class="btn" href="/contact">Get a fixed price for this fitout</a></p>
+      <p style="margin:16px 0 0"><a class="btn" href="#quote">Get a fixed price for this fitout</a></p>
     </aside>
   </div>
 """
@@ -211,7 +211,7 @@ def home():
       <div class="kick">Commercial builders, Sydney</div>
       <h1>Commercial builds and fitouts. Built with care, delivered on the date.</h1>
       <p>City Fitouts builds offices, shops, cafes and restaurants, medical rooms and childcare centres across Sydney. Fixed price, fixed program, one site manager from the first day to handover.</p>
-      <p><a class="btn" href="/contact">Get a fixed price</a> &nbsp; <a class="textlink" href="#checker">Check what your fitout will cost &rarr;</a></p>
+      <p><a class="btn" href="#checker">Get a fixed price</a> &nbsp; <a class="textlink" href="#checker">Check what your fitout will cost &rarr;</a></p>
     </div>
     <div class="heroimg" role="img" aria-label="38-40 Ricketty Street, Mascot" style="background-image:url(/images/ricketty-street-mascot.jpg)"></div>
   </section>
@@ -254,7 +254,7 @@ def projects_page():
     return head(p[2], p[3], p[1]) + f"""
   <section class="hero"><div class="kick">Our projects</div><h1>Built, handed over, trading.</h1><p>A selection of recent fitouts and refurbishments. Every one priced fixed, run by our own site manager and handed over with its certificates on the agreed date.</p></section>
   <section class="band">{projects_html()}</section>
-  <section class="cta-band"><h2>Have a site in mind?</h2><p>Send the lease plan or your architect's drawings and we will walk it with you.</p><p><a class="btn" href="/contact">Get a fixed price</a></p></section>
+  <section class="cta-band"><h2>Have a site in mind?</h2><p>Send the lease plan or your architect's drawings and we will walk it with you.</p><p><a class="btn" href="/fitout-cost#calc">Get a fixed price</a></p></section>
 {FOOT}"""
 
 def fitouts_page():
@@ -289,7 +289,7 @@ def fitouts_page():
     <details><summary>Do I need council approval?</summary><p>Often not. Internal, non-structural work in a commercial building is usually exempt under the NSW Codes SEPP. A change of use, a new shopfront or a food premises can go through a private certifier as complying development. Heritage buildings and some changes of use need a DA. We engage the certifier and manage the approval as part of the job.</p></details>
     <details><summary>Will the price change?</summary><p>Only if the scope does. The lump sum covers everything on the drawings and in the scope list; anything the base building hides (asbestos, undersized services) is flagged the day we find it, priced, and only done when you say so.</p></details>
   </section>
-  <section class="cta-band"><h2>Ready to price your fitout?</h2><p>Check the <a href="/fitout-cost">cost range</a> first, or send us the drawings for a fixed price.</p><p><a class="btn" href="/contact">Get a fixed price</a></p></section>
+  <section class="cta-band"><h2>Ready to price your fitout?</h2><p>Check the <a href="/fitout-cost">cost range</a> first, or send us the drawings for a fixed price.</p><p><a class="btn" href="/fitout-cost#calc">Get a fixed price</a></p></section>
 {FOOT}"""
 
 def cost_page():
@@ -326,8 +326,8 @@ def cost_page():
     </div>
   </section>
   <section class="band" id="quote">
-    <h2>Turn the range into a fixed price</h2>
-    <p>Your answers above come with the request. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a> or <a href="tel:{PHONE2_TEL}">{PHONE2}</a>.</p>
+    <h2>Get a fixed price</h2>
+    <p>Your calculator answers come with the request, so the first call is about your site, not a form. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a> or <a href="tel:{PHONE2_TEL}">{PHONE2}</a>.</p>
     {quote_form("fitout-cost")}
   </section>
 {FOOT}
@@ -350,7 +350,7 @@ def about_page():
     <h2>How we are set up</h2>
     <p>Licensed NSW commercial builder with contract works and public liability insurance. Our own site managers run every job; trades are long-standing subcontractors we have worked with across many fitouts. Architects and designers get a builder who prices their drawings fairly and builds them as drawn; owners and tenants get one point of contact from the first walk-through to the keys.</p>
   </section>
-  <section class="cta-band"><h2>Talk to us about your project</h2><p><a class="btn" href="/contact">Get a fixed price</a></p></section>
+  <section class="cta-band"><h2>Talk to us about your project</h2><p><a class="btn" href="/fitout-cost#calc">Get a fixed price</a></p></section>
 {FOOT}"""
 
 def contact_page():
@@ -487,7 +487,7 @@ def space_page(sp):
     return head(sp["title"], sp["desc"], url) + f"""
   <section class="hero split">
     <div><div class="kick">{sp["name"]}</div><h1>{sp["h1"]}</h1><p>{sp["lede"]}</p>
-    <p><a class="btn" href="/contact">Get a fixed price</a> &nbsp; <a class="textlink" href="/fitout-cost?type={sp["key"]}">Check the cost range &rarr;</a></p></div>
+    <p><a class="btn" href="/fitout-cost?type={sp["key"]}#calc">Get a fixed price</a> &nbsp; <a class="textlink" href="/fitout-cost?type={sp["key"]}#calc">Check the cost range &rarr;</a></p></div>
     <div class="heroimg" role="img" aria-label="{sp["name"]}" style="background-image:url(/images/{sp["img"]})"></div>
   </section>
   <section class="band"><div class="cols">
@@ -496,7 +496,7 @@ def space_page(sp):
   </div></section>
   {APPROACH}
   <section class="band faq"><h2>Questions people ask</h2>{faqs}</section>
-  <section class="cta-band"><h2>Price your {sp["name"].lower()[:-1] if sp["name"].endswith("s") else sp["name"].lower()}</h2><p>Check the <a href="/fitout-cost?type={sp["key"]}">cost range</a> in ten seconds, or send us the drawings for a fixed price.</p><p><a class="btn" href="/contact">Get a fixed price</a></p></section>
+  <section class="cta-band"><h2>Price your {sp["name"].lower()[:-1] if sp["name"].endswith("s") else sp["name"].lower()}</h2><p>Check the <a href="/fitout-cost?type={sp["key"]}">cost range</a> in ten seconds, or send us the drawings for a fixed price.</p><p><a class="btn" href="/fitout-cost#calc">Get a fixed price</a></p></section>
   <p class="fine">Other spaces: {others}</p>
 {FOOT}
 <script type="application/ld+json">{ld}</script>
