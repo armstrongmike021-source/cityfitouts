@@ -92,6 +92,8 @@ CALC = """
           <button class="opt on" data-v="office">Office</button>
           <button class="opt" data-v="retail">Retail shop</button>
           <button class="opt" data-v="hospo">Cafe or restaurant</button>
+          <button class="opt" data-v="foodcourt">Food court tenancy</button>
+          <button class="opt" data-v="pharmacy">Pharmacy</button>
           <button class="opt" data-v="medical">Medical or dental</button>
           <button class="opt" data-v="childcare">Childcare centre</button>
         </div></div>
@@ -125,9 +127,9 @@ CALC = """
 
 CALC_JS = """
 <script>
-const RATES={office:{basic:[1200,1800],mid:[1800,2500],premium:[2500,3500]},retail:{basic:[1000,1500],mid:[1500,2200],premium:[2200,3200]},hospo:{basic:[2500,3200],mid:[3200,4000],premium:[4000,5500]},medical:{basic:[2200,2800],mid:[2800,3500],premium:[3500,4500]},childcare:{basic:[2000,2600],mid:[2600,3300],premium:[3300,4200]}};
-const WEEKS={office:{basic:[4,6],mid:[6,9],premium:[9,14]},retail:{basic:[3,5],mid:[5,8],premium:[8,12]},hospo:{basic:[6,9],mid:[9,13],premium:[12,18]},medical:{basic:[8,10],mid:[10,14],premium:[14,20]},childcare:{basic:[10,14],mid:[14,18],premium:[18,24]}};
-const LABEL={office:'Office',retail:'Retail shop',hospo:'Cafe or restaurant',medical:'Medical or dental',childcare:'Childcare centre',basic:'Basic',mid:'Mid',premium:'Premium',same:'Same use',new:'New use'};
+const RATES={office:{basic:[1200,1800],mid:[1800,2500],premium:[2500,3500]},retail:{basic:[1000,1500],mid:[1500,2200],premium:[2200,3200]},hospo:{basic:[2500,3200],mid:[3200,4000],premium:[4000,5500]},foodcourt:{basic:[4000,5000],mid:[5000,6000],premium:[6000,7500]},pharmacy:{basic:[1800,2400],mid:[2400,3200],premium:[3200,4200]},medical:{basic:[2200,2800],mid:[2800,3500],premium:[3500,4500]},childcare:{basic:[2000,2600],mid:[2600,3300],premium:[3300,4200]}};
+const WEEKS={office:{basic:[4,6],mid:[6,9],premium:[9,14]},retail:{basic:[3,5],mid:[5,8],premium:[8,12]},hospo:{basic:[6,9],mid:[9,13],premium:[12,18]},foodcourt:{basic:[6,8],mid:[8,10],premium:[10,14]},pharmacy:{basic:[4,6],mid:[6,8],premium:[8,12]},medical:{basic:[8,10],mid:[10,14],premium:[14,20]},childcare:{basic:[10,14],mid:[14,18],premium:[18,24]}};
+const LABEL={office:'Office',retail:'Retail shop',hospo:'Cafe or restaurant',foodcourt:'Food court tenancy',pharmacy:'Pharmacy',medical:'Medical or dental',childcare:'Childcare centre',basic:'Basic',mid:'Mid',premium:'Premium',same:'Same use',new:'New use'};
 const APPR={
  exempt:['Likely exempt development','Internal, non-structural work in a commercial building usually needs no council approval under the NSW Codes SEPP. Fire and electrical work still needs certification.'],
  cdc:['Complying development (CDC)','A private certifier can approve internal alterations, shopfronts and many changes of use in about 2-4 weeks, without a DA. Food premises also need council registration.'],
@@ -144,7 +146,7 @@ function calc(){
   let k='exempt';
   if(her||(S.type==='medical'&&S.use==='new')||(S.type==='childcare'&&S.use==='new')) k='da';
   else if(S.type==='childcare') k='cdc';
-  else if(S.use==='new'||S.type==='hospo'||S.grade==='premium') k='cdc';
+  else if(S.use==='new'||S.type==='hospo'||S.type==='foodcourt'||S.grade==='premium') k='cdc';
   const A={exempt:.015,cdc:.03,da:.06}[k];
   const div=1+D+A;
   const con=[clo/div,chi/div], des=[con[0]*D,con[1]*D], app=[con[0]*A,con[1]*A];
@@ -153,15 +155,15 @@ function calc(){
   $('perm2').textContent='$'+Math.round(lo*f).toLocaleString('en-AU')+' - $'+Math.round(hi*f).toLocaleString('en-AU')+' per m² · '+a+' m²';
   $('cCon').textContent=rng(con); $('cDes').textContent=rng(des); $('cApp').textContent=rng(app);
   const AN={exempt:'exempt development',cdc:'complying development',da:'a DA'};
-  $('splitNote').textContent='Design allowed at '+Math.round(D*100)+'% of construction for a '+LABEL[S.grade].toLowerCase()+' finish (we build from your designer\'s drawings); approvals and certification '+(A*100)+'% for '+AN[k]+'.';
+  $('splitNote').textContent='Design allowed at '+Math.round(D*100)+'% of construction for a '+LABEL[S.grade].toLowerCase()+' finish (we build from your designer\\'s drawings); approvals and certification '+(A*100)+'% for '+AN[k]+'.';
   $('weeks').textContent=wlo+' - '+whi+' weeks';
   $('appr').innerHTML='<b>'+APPR[k][0]+'</b><span>'+APPR[k][1]+'</span>';
   const line=`${a} m2 | ${LABEL[S.type]} | ${LABEL[S.grade]} finish | ${LABEL[S.use]} | heritage: ${her?'yes':'no'} | ${money(clo)}-${money(chi)} (construction ${rng(con)}, design ${rng(des)}, approvals ${rng(app)}) | ${wlo}-${whi} weeks | ${APPR[k][0]}`;
   try{sessionStorage.setItem('cf_calc',line)}catch(e){}
   const cf=$('calcField'); if(cf) cf.value=line;
 }
-['type','grade','use'].forEach(g=>$(g).addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;[...$(g).children].forEach(x=>x.classList.remove('on'));b.classList.add('on');S[g]=b.dataset.v;calc();}));
-$('area').addEventListener('input',calc); $('heritage').addEventListener('change',calc);
+['type','grade','use'].forEach(g=>$(g).addEventListener('click',e=>{const b=e.target.closest('.opt');if(!b)return;[...$(g).children].forEach(x=>x.classList.remove('on'));b.classList.add('on');S[g]=b.dataset.v;if(g==='type'&&!touched){$('area').value=S.type==='foodcourt'?45:150;}calc();}));
+let touched=false;$('area').addEventListener('input',()=>{touched=true;calc();}); $('heritage').addEventListener('change',calc);
 const pre=new URLSearchParams(location.search).get('type'); if(pre&&RATES[pre]){S.type=pre;[...$('type').children].forEach(x=>x.classList.toggle('on',x.dataset.v===pre));}
 calc();
 </script>"""
@@ -176,7 +178,7 @@ def quote_form(page):
       <label for="email">Email</label><input id="email" name="email" type="email" required>
       <label for="address">Site address or suburb</label><input id="address" name="address" required>
       <label for="ptype">Type of project</label>
-      <select id="ptype" name="project_type"><option>Office fitout</option><option>Retail fitout</option><option>Cafe or restaurant fitout</option><option>Medical or dental fitout</option><option>Childcare centre</option><option>Alterations or refurbishment</option><option>Make-good</option><option>Something else</option></select>
+      <select id="ptype" name="project_type"><option>Office fitout</option><option>Retail fitout</option><option>Cafe or restaurant fitout</option><option>Food court tenancy fitout</option><option>Pharmacy fitout</option><option>Medical or dental fitout</option><option>Childcare centre</option><option>Alterations or refurbishment</option><option>Make-good</option><option>Something else</option></select>
       <label for="notes">Tell us about the job (optional)</label><textarea id="notes" name="notes" rows="4"></textarea>
       <label>Photos of the space (optional, up to 3, 8 MB each)</label>
       <div class="two" style="grid-template-columns:1fr 1fr 1fr"><input type="file" name="photo1" accept="image/*"><input type="file" name="photo2" accept="image/*"><input type="file" name="photo3" accept="image/*"></div>
@@ -304,6 +306,8 @@ def cost_page():
           <tr><td>Office</td><td class="n">1,200-1,800</td><td class="n">1,800-2,500</td><td class="n">2,500-3,500</td></tr>
           <tr><td>Shop</td><td class="n">1,000-1,500</td><td class="n">1,500-2,200</td><td class="n">2,200-3,200</td></tr>
           <tr><td>Cafe, restaurant</td><td class="n">2,500-3,200</td><td class="n">3,200-4,000</td><td class="n">4,000-5,500</td></tr>
+          <tr><td>Food court tenancy</td><td class="n">4,000-5,000</td><td class="n">5,000-6,000</td><td class="n">6,000-7,500</td></tr>
+          <tr><td>Pharmacy</td><td class="n">1,800-2,400</td><td class="n">2,400-3,200</td><td class="n">3,200-4,200</td></tr>
           <tr><td>Medical, dental</td><td class="n">2,200-2,800</td><td class="n">2,800-3,500</td><td class="n">3,500-4,500</td></tr>
           <tr><td>Childcare</td><td class="n">2,000-2,600</td><td class="n">2,600-3,300</td><td class="n">3,300-4,200</td></tr>
         </table>
