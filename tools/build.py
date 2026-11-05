@@ -51,7 +51,7 @@ def head(title, desc, url, extra=""):
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/">{LOGO}<b>City<br>Fitouts</b></a>
-    <nav><a href="/commercial-fitouts-sydney">Fitouts</a><a href="/our-projects">Projects</a><a href="/fitout-cost">Cost Calculator</a><a href="/about">About</a><a href="/contact">Contact</a><a class="cta" href="/fitout-cost#calc">Get a fixed price</a></nav>
+    <nav><a href="/office-fitouts-sydney">Office</a><a href="/retail-fitouts-sydney">Retail</a><a href="/cafe-restaurant-fitouts-sydney">Cafe</a><a href="/food-court-fitouts-sydney">Food court</a><a href="/pharmacy-fitouts-sydney">Pharmacy</a><a href="/gym-fitouts-sydney">Gym</a><a href="/medical-fitouts-sydney">Medical</a><a href="/childcare-fitouts-sydney">Childcare</a><a href="/our-projects">Projects</a><a class="cta" href="/fitout-cost#calc">Get a fixed price</a></nav>
   </header>
 """
 
@@ -60,7 +60,7 @@ FOOT = f"""
     <div class="fcols">
       <div><b>City Fitouts</b><br>Commercial builders and fitout contractors, Sydney.<br>Fitouts, alterations and refurbishments for tenants, landlords and their architects.</div>
       <div><b>Talk to us</b><br>6 Ossary Street, Mascot NSW 2020<br>Mon - Fri 9am - 5pm, weekends by appointment<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="tel:{PHONE2_TEL}">{PHONE2}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></div>
-      <div><b>Pages</b><br><a href="/commercial-fitouts-sydney">Commercial fitouts</a><br><a href="/office-fitouts-sydney">Office</a> · <a href="/retail-fitouts-sydney">Retail</a> · <a href="/cafe-restaurant-fitouts-sydney">Cafe</a> · <a href="/medical-fitouts-sydney">Medical</a> · <a href="/childcare-fitouts-sydney">Childcare</a><br><a href="/our-projects">Projects</a><br><a href="/fitout-cost">Fitout cost</a><br><a href="/about">About</a><br><a href="/contact">Contact</a></div>
+      <div><b>Pages</b><br><a href="/commercial-fitouts-sydney">Commercial fitouts</a><br><a href="/office-fitouts-sydney">Office</a> · <a href="/retail-fitouts-sydney">Retail</a> · <a href="/cafe-restaurant-fitouts-sydney">Cafe</a> · <a href="/food-court-fitouts-sydney">Food court</a> · <a href="/pharmacy-fitouts-sydney">Pharmacy</a> · <a href="/gym-fitouts-sydney">Gym</a> · <a href="/medical-fitouts-sydney">Medical</a> · <a href="/childcare-fitouts-sydney">Childcare</a><br><a href="/our-projects">Projects</a><br><a href="/fitout-cost">Fitout cost</a><br><a href="/about">About</a><br><a href="/contact">Contact</a></div>
     </div>
     <p class="fine">Cost ranges on this site are a guide only; every job is priced after a walk-through.</p>
   </footer>
@@ -223,9 +223,11 @@ def home():
       <a href="/office-fitouts-sydney"><img src="/images/office-open-plan.jpg" alt="Office fitout" loading="lazy"><div><b>Offices</b><span>Partitions, joinery, services and make-good</span></div></a>
       <a href="/retail-fitouts-sydney"><img src="/images/retail-boutique.jpg" alt="Retail fitout" loading="lazy"><div><b>Retail</b><span>Shopfronts, display joinery, centre fitouts</span></div></a>
       <a href="/cafe-restaurant-fitouts-sydney"><img src="/images/cafe.jpg" alt="Cafe fitout" loading="lazy"><div><b>Cafes and restaurants</b><span>Kitchens, exhaust, grease traps, front of house</span></div></a>
+      <a href="/food-court-fitouts-sydney"><img src="/images/food-court.jpg" alt="Food court tenancy fitout" loading="lazy"><div><b>Food court tenancies</b><span>Kitchens and serveries in 30 to 60 m2, to the centre's rules</span></div></a>
+      <a href="/pharmacy-fitouts-sydney"><img src="/images/kareela-pharmacy.jpg" alt="Pharmacy fitout" loading="lazy"><div><b>Pharmacies</b><span>Dispensaries, retail shelving, consult rooms</span></div></a>
+      <a href="/gym-fitouts-sydney"><img src="/images/gym.jpg" alt="Gym fitout" loading="lazy"><div><b>Gyms and fitness studios</b><span>Flooring, mechanical, showers and change rooms</span></div></a>
       <a href="/medical-fitouts-sydney"><img src="/images/medical-dental.jpg" alt="Medical fitout" loading="lazy"><div><b>Medical and dental</b><span>Consult rooms, surgeries, specialised services</span></div></a>
       <a href="/childcare-fitouts-sydney"><img src="/images/childcare-preschool.jpg" alt="Childcare fitout" loading="lazy"><div><b>Childcare</b><span>Playrooms, bathrooms, kitchens, outdoor areas</span></div></a>
-      <a href="/commercial-fitouts-sydney"><img src="/images/office-lobby.jpg" alt="Refurbishment" loading="lazy"><div><b>Alterations and refurbishments</b><span>Lobbies, amenities, live-trading refurbs</span></div></a>
     </div>
   </section>
   {APPROACH}
@@ -261,13 +263,17 @@ def projects_page():
 def fitouts_page():
     p = PAGES[2]
     return head(p[2], p[3], p[1]) + f"""
-  <section class="hero"><div class="kick">Commercial fitouts Sydney</div><h1>Office, retail and hospitality fitouts, built to a fixed price.</h1><p>We build what your architect or shopfitter has drawn, and we build it for the figure we quoted. City Fitouts works for tenants, landlords, franchisees and the architects who look after them.</p></section>
+  <section class="hero"><div class="kick">Commercial fitouts Sydney</div><h1>Offices, shops, cafes, food courts, pharmacies, gyms, medical and childcare, built to a fixed price.</h1><p>We build what your architect or shopfitter has drawn, and we build it for the figure we quoted. City Fitouts works for tenants, landlords, franchisees and the architects who look after them.</p></section>
   <section class="band">
     <div class="cols">
       <div class="card"><h3><a href="/office-fitouts-sydney">Office fitouts</a></h3><p>Partitions and glazing, ceilings, lighting and power, meeting rooms, kitchens and breakout areas, joinery and flooring. Mechanical and fire services coordinated with the building. Make-good at lease end.</p></div>
       <div class="card"><h3><a href="/retail-fitouts-sydney">Retail fitouts</a></h3><p>Shopfronts, display and counter joinery, lighting, flooring and signage installation inside shopping centres and on the high street. Centre out-of-hours programs, landlord approvals and shop drawings handled.</p></div>
       <div class="card"><h3><a href="/cafe-restaurant-fitouts-sydney">Cafe and restaurant fitouts</a></h3><p>Commercial kitchens, exhaust and mechanical, grease arrestors and hydraulics, cool rooms, bars and counters, front-of-house finishes. Food-premises compliance built in from day one.</p></div>
-      <div class="card"><h3><a href="/medical-fitouts-sydney">Medical and dental</a> / <a href="/childcare-fitouts-sydney">childcare</a></h3><p>Consult rooms, surgeries and treatment rooms with their specialised plumbing and electrical; childcare playrooms, bathrooms and kitchens to the National Quality Framework.</p></div>
+      <div class="card"><h3><a href="/food-court-fitouts-sydney">Food court tenancy fitouts</a></h3><p>A full commercial kitchen, exhaust and fire-suppressed canopy, grease arrestor and branded servery in a 30 to 60 m2 tenancy, built to the centre's design rules and out-of-hours program.</p></div>
+      <div class="card"><h3><a href="/pharmacy-fitouts-sydney">Pharmacy fitouts</a></h3><p>Dispensary and counter joinery, retail shelving and lighting, consult rooms, secure storage and the shopfront, built to the Pharmacy Council of NSW premises requirements and the banner group's manual.</p></div>
+      <div class="card"><h3><a href="/gym-fitouts-sydney">Gym and fitness studio fitouts</a></h3><p>Impact-rated rubber and timber flooring, mirrors, the mechanical and ventilation a full class needs, showers and change rooms, acoustic treatment and the change-of-use approval.</p></div>
+      <div class="card"><h3><a href="/medical-fitouts-sydney">Medical and dental fitouts</a></h3><p>Consult rooms, surgeries and treatment rooms with their specialised plumbing and electrical, infection-control finishes and accessibility to every room.</p></div>
+      <div class="card"><h3><a href="/childcare-fitouts-sydney">Childcare centre fitouts</a></h3><p>Playrooms, children's bathrooms and nappy-change, kitchen, laundry, cot rooms and the outdoor play area, built to the National Quality Framework and the licensing inspection date.</p></div>
     </div>
   </section>
   <section class="band">
@@ -476,6 +482,39 @@ SPACES = [
   faqs=[("Can you convert a house or a shop into a centre?","Sometimes. It needs a DA and the right zoning, parking and outdoor area. We walk the building with you before you commit."),
         ("Do you build the outdoor area?","Yes - soft-fall, shade structures, fencing, landscaping and the covered verandah are part of the job."),
         ("How much does a childcare fitout cost?","Roughly $2,000-4,200 per m2 of indoor area in 2026, before the outdoor area. The cost checker gives the range for your floor area.")]),
+ dict(slug="food-court-fitouts-sydney", key="foodcourt", name="Food court tenancy fitouts", h1="Food court tenancy fitouts, Sydney", img="food-court.jpg",
+  title="Food court fitouts Sydney - shopping centre food tenancy builder | City Fitouts",
+  desc="Food court tenancy and kiosk fitout builders in Sydney. Commercial kitchen, exhaust and fire suppression, grease arrestor and branded servery in a 30-60 m2 tenancy, built to the centre's rules and program.",
+  lede="A food court tenancy is a full commercial kitchen in 30 to 60 square metres, built to the shopping centre's design rules, approved contractors and out-of-hours program. City Fitouts builds food court outlets and kiosks for franchise brands and independents, with the exhaust, fire suppression and grease arrestor connected to the centre's services and signed off before you open.",
+  scope=["Commercial kitchen, cool room and dry store in a tight footprint","Exhaust canopy, fire suppression and connection to the centre riser","Grease arrestor, hydraulics and gas","Servery counter, menu boards and brand joinery","Shopfront, signage and lighting to the centre's design criteria","Three-phase power, data and POS"],
+  program="A food tenancy taking over a food tenancy runs six to eight weeks; a first food use in a former shop ten to fourteen. The centre's design approval comes before the certifier, and most work is after hours.",
+  approvals="The landlord's tenancy coordinator approves the design first. A food tenancy replacing a food tenancy is usually complying development through a private certifier, plus council food-premises registration and a Sydney Water trade-waste approval for the grease arrestor. A first food use in a former shop may need a DA depending on the centre's consent.",
+  faqs=[("What is a food court outlet called?","A food court tenancy, or food court outlet. A kiosk is the smaller island unit in the mall itself, usually coffee, juice or non-food retail. We build both."),
+        ("Why does it cost more per square metre than a cafe?","The same kitchen services in a much smaller space, plus the centre's design rules, approved trades, insurances, bond and after-hours work. The cost checker shows the range for your floor area."),
+        ("Do you work to the franchise manual?","Yes. The brand sends its standard fitout package; we price it against the actual tenancy and build it to the brand's specification and the centre's rules."),
+        ("Can you build in Westfield, Stockland and Scentre centres?","Yes. Macpac at Warringah Mall and Kareela Community Pharmacy were both centre fitouts, built on the centre's out-of-hours program.")]),
+ dict(slug="pharmacy-fitouts-sydney", key="pharmacy", name="Pharmacy fitouts", h1="Pharmacy fitouts, Sydney", img="kareela-pharmacy.jpg",
+  title="Pharmacy fitouts Sydney - dispensary and retail pharmacy builder | City Fitouts",
+  desc="Pharmacy fitout builders in Sydney. Dispensary joinery, retail shelving and lighting, consult rooms, secure storage and shopfront, built to the Pharmacy Council of NSW requirements and the banner group's manual.",
+  lede="A pharmacy is a shop at the front and a clinical space at the back. City Fitouts builds both: retail shelving, gondolas and lighting that sell the front of store, and a dispensary with the sinks, refrigeration, secure storage and consult room the Pharmacy Council of NSW requires. Kareela Community Pharmacy is one of ours.",
+  scope=["Dispensary joinery, sinks and vaccine refrigeration","Secure storage for scheduled medicines and a lockable dispensary","Consultation rooms for vaccinations and services","Retail gondolas, wall bays and feature lighting","Shopfront, signage and security","Compounding rooms where needed"],
+  program="A refresh of a trading pharmacy runs four to six weeks, often staged so the scripts keep coming; a new pharmacy in a shell eight to twelve.",
+  approvals="A pharmacy replacing a shop is retail to retail, so the internal work is usually exempt and a new shopfront complying development. Pharmacy Council of NSW premises registration covers the dispensary, storage, refrigeration and a private area for counselling; the PBS approval is the owner's matter.",
+  faqs=[("Can we stay open during the refit?","Usually. We stage the retail floor and do the dispensary after hours, as at Kareela, so the pharmacy keeps trading."),
+        ("Do you build to the banner group's manual?","Yes. Priceline, Chemist Warehouse, TerryWhite and the independents' banners each have a fixtures and graphics standard; we build to it."),
+        ("What about the dispensing robot?","Your supplier sets the footprint and the services; we build the floor, power and data to it so it drops in at the end of the job."),
+        ("How much does a pharmacy fitout cost?","Roughly $1,800-4,200 per m2 in 2026, between a shop and a medical fitout. The cost checker gives the range for your floor area.")]),
+ dict(slug="gym-fitouts-sydney", key="gym", name="Gym and fitness studio fitouts", h1="Gym and fitness studio fitouts, Sydney", img="gym.jpg",
+  title="Gym fitouts Sydney - fitness studio builder | City Fitouts",
+  desc="Gym and fitness studio fitout builders in Sydney. Impact-rated flooring, mirrors, mechanical and ventilation, showers and change rooms, acoustic treatment and the change-of-use approval, to a fixed price.",
+  lede="A gym looks simple - an open floor - but it is built around three things an office never needs: the air a full class breathes, the showers and change rooms, and a floor that takes dropped weights without the tenant below hearing it. City Fitouts builds gyms, boutique studios and franchise clubs across Sydney.",
+  scope=["Impact-rated rubber, timber and turf flooring over acoustic underlay","Mechanical and ventilation sized for the occupancy","Showers, change rooms and accessible amenities","Mirrors, glazing and acoustic treatment to walls and ceilings","Reception, retail and lighting","Rig and rack fixing, AV and access control for 24-hour clubs"],
+  program="A studio in an existing space runs five to seven weeks; a mid-finish gym with new change rooms seven to ten; a premium club with recovery rooms ten to fourteen.",
+  approvals="A gym is a recreation facility (indoor), so going into a former shop, office or warehouse is a change of use. Most go as complying development where the zoning allows; a 24-hour gym, a large floor or a residential neighbour usually means a DA with noise and parking conditions. We engage the certifier and an acoustic consultant where needed.",
+  faqs=[("Can you put a gym in a warehouse unit?","Yes, and it is the most common gym fitout we see. The change of use, the mechanical from scratch and new amenities are the job; we check the slab for free-weight zones."),
+        ("Do you build to the franchise manual?","Yes. Anytime, F45, Snap and the boutique brands each have a fitout standard for floor zones, finishes and signage; we price it against the actual tenancy."),
+        ("What about noise to the neighbours?","Dropped weights and class music carry through slabs and party walls. We build the floor and the acoustic treatment to the consultant's spec so the DA conditions are met on day one."),
+        ("How much does a gym fitout cost?","Roughly $1,200-3,500 per m2 in 2026, excluding equipment. The cost checker gives the range for your floor area.")]),
 ]
 
 def space_page(sp):
