@@ -7,7 +7,7 @@ DOMAIN = "https://cityfitouts.com.au"
 PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
 PHONE2 = "0450 084 175"; PHONE2_TEL = "0450084175"
 EMAIL = "info@cityfitouts.com.au"
-GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");</script>'
+GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");gtag("config","G-GN84K201WK");</script>'
 ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-314 0 1603 1603'%3E%3Cpath d='M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
 LOGO = """<svg viewBox="0 0 975 1603" aria-hidden="true"><path d="M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z" fill="#1E2C4F"/></svg>"""   # the Estier mark (three triangles) - City Fitouts is an Estier brand (Mike, 3 Nov 2026)
 
