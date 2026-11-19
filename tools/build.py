@@ -7,8 +7,8 @@ DOMAIN = "https://cityfitouts.com.au"
 PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
 EMAIL = "info@cityfitouts.com.au"
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");gtag("config","G-GN84K201WK");</script>'
-ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-314 0 1603 1603'%3E%3Cpath d='M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
-LOGO = """<svg viewBox="0 0 975 1603" aria-hidden="true"><path d="M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z" fill="#1E2C4F"/></svg>"""   # the Estier mark (three triangles) - City Fitouts is an Estier brand (Mike, 3 Nov 2026)
+ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -298 1580 1580'%3E%3Cpath d='M1580 0L1103 932L1053 323Z M503 657L458 56L968 368Z M0 985L504 658L1028 985Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
+LOGO = """<svg viewBox="0 0 1580 985" aria-hidden="true"><path d="M1580 0L1103 932L1053 323Z M503 657L458 56L968 368Z M0 985L504 658L1028 985Z" fill="#1E2C4F"/></svg>"""   # City Fitouts mark: the three triangles turned 27 degrees clockwise so the base sits flat (Mike approved 20 Nov 2026)
 
 PAGES = [  # (file, clean url, title, description)
     ("index.html", "/", "City Fitouts - Commercial builders and fitout contractors, Sydney",
