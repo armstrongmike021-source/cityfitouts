@@ -209,7 +209,7 @@ def home():
   <section class="hero split">
     <div>
       <div class="kick">Commercial builders, Sydney</div>
-      <h1>Commercial builds and fitouts. Built with care, delivered on the date.</h1>
+      <h1>28-day Commercial Builds and Fitouts or $5000 per day paid to you*</h1>
       <p>City Fitouts builds offices, shops, cafes and restaurants, medical rooms and childcare centres across Sydney. Fixed price, fixed program, one site manager from the first day to handover.</p>
       <p><a class="btn" href="#checker">Get a fixed price</a> &nbsp; <a class="textlink" href="#checker">Check what your fitout will cost &rarr;</a></p>
     </div>
@@ -408,7 +408,7 @@ header.top .brand b{font-size:30px;line-height:27px;display:block;margin-top:-3p
 
 def main():
     os.chdir(ROOT)
-    out = {"index.html": home(), "our-projects.html": projects_page(), "commercial-fitouts-sydney.html": fitouts_page(),
+    out = {"index.html": home().replace('<p class="fine">Cost ranges', '<p class="fine">* only for sites that are DA or CDC approved and ready to go.</p>\n    <p class="fine">Cost ranges', 1), "our-projects.html": projects_page(), "commercial-fitouts-sydney.html": fitouts_page(),
            "fitout-cost.html": cost_page(), "about.html": about_page(), "contact.html": contact_page(), "thanks.html": THANKS,
            "city.css": CITY_CSS}
     for f, s in out.items():
