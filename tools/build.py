@@ -209,7 +209,8 @@ def home():
   <section class="hero split">
     <div>
       <div class="kick">Commercial builders, Sydney</div>
-      <h1>Commercial builds and fitouts. Built with care, delivered on the date.</h1>
+      <h1>28-day Commercial Builds and Fitouts. Or $5000 per day paid to you*</h1>
+      <p class="fine">* only for sites that are DA or CDC approved and ready to go.</p>
       <p>City Fitouts builds offices, shops, cafes and restaurants, medical rooms and childcare centres across Sydney. Fixed price, fixed program, one site manager from the first day to handover.</p>
       <p><a class="btn" href="#checker">Get a fixed price</a> &nbsp; <a class="textlink" href="#checker">Check what your fitout will cost &rarr;</a></p>
     </div>
@@ -390,7 +391,7 @@ nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
 .btn.amber{background:var(--navy)}
 header.top .brand b{font-size:30px;line-height:27px;display:block;margin-top:-3px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:46px;flex:none}
-.hero{padding:30px 0 10px}.hero h1{max-width:760px}
+.hero{padding:30px 0 10px}.hero h1{max-width:760px}.hero p.fine{font-size:14px;color:#555;margin:-4px 0 16px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:820px){.steps,.steps.four{grid-template-columns:1fr}}
 .steps .num{font-size:13px;letter-spacing:.14em;color:var(--muted);font-weight:600}
