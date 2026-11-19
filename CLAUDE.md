@@ -16,7 +16,7 @@ deploys from this repo (branch main, publish "."), so a push to main is a deploy
   shown as Construction / Design (your architect or designer) / Approvals. Mike put the design row BACK (2 Nov 2026)
   because the design fee may go to the architect who referred the job. The section id is `checker`, NOT `cost` -
   `$('cost')` is the price element and an id clash hid the whole calculator once.
-- Contact: 0411 250 058 (Mike) and 0450 084 175 (Sepi) - numbers only, no names on the site. 6 Ossary Street,
+- Contact: 0411 250 058 (Mike) ONLY - Sepi's number came off the site 20 Nov 2026. Number only, no name on the site. 6 Ossary Street,
   Mascot NSW 2020. Mon-Fri 9-5, weekends by appointment. info@cityfitouts.com.au (Forward Email alias, to be set up
   with the domain's DNS in Netlify DNS).
 - Photos: no photo repeats within a page. Hero = 38-40 Ricketty Street Mascot (Mike's own photo, labels cropped).

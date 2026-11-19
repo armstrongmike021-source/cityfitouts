@@ -5,7 +5,6 @@ import os, datetime
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOMAIN = "https://cityfitouts.com.au"
 PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
-PHONE2 = "0450 084 175"; PHONE2_TEL = "0450084175"
 EMAIL = "info@cityfitouts.com.au"
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");gtag("config","G-GN84K201WK");</script>'
 ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-314 0 1603 1603'%3E%3Cpath d='M974 4L974 1051L652 532Z M315 1079L1 565L597 610Z M16 1600L316 1080L931 1132Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
@@ -59,7 +58,7 @@ FOOT = f"""
   <footer>
     <div class="fcols">
       <div><b>City Fitouts</b><br>Commercial builders and fitout contractors, Sydney.<br>Fitouts, alterations and refurbishments for tenants, landlords and their architects.</div>
-      <div><b>Talk to us</b><br>6 Ossary Street, Mascot NSW 2020<br>Mon - Fri 9am - 5pm, weekends by appointment<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="tel:{PHONE2_TEL}">{PHONE2}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></div>
+      <div><b>Talk to us</b><br>6 Ossary Street, Mascot NSW 2020<br>Mon - Fri 9am - 5pm, weekends by appointment<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></div>
       <div><b>Pages</b><br><a href="/commercial-fitouts-sydney">Commercial fitouts</a><br><a href="/office-fitouts-sydney">Office</a> · <a href="/retail-fitouts-sydney">Retail</a> · <a href="/cafe-restaurant-fitouts-sydney">Cafe</a> · <a href="/food-court-fitouts-sydney">Food court</a> · <a href="/pharmacy-fitouts-sydney">Pharmacy</a> · <a href="/gym-fitouts-sydney">Gym</a> · <a href="/medical-fitouts-sydney">Medical</a> · <a href="/childcare-fitouts-sydney">Childcare</a><br><a href="/our-projects">Projects</a><br><a href="/fitout-cost">Fitout cost</a><br><a href="/about">About</a><br><a href="/contact">Contact</a></div>
     </div>
     <p class="fine">Cost ranges on this site are a guide only; every job is priced after a walk-through.</p>
@@ -245,7 +244,7 @@ def home():
   {TRUSTED}
   <section class="band" id="quote">
     <h2>Get a fixed price</h2>
-    <p>Your calculator answers come with the request, so the first call is about your site, not a form. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a> or <a href="tel:{PHONE2_TEL}">{PHONE2}</a>.</p>
+    <p>Your calculator answers come with the request, so the first call is about your site, not a form. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a>.</p>
     {quote_form("home")}
   </section>
 {FOOT}
@@ -335,7 +334,7 @@ def cost_page():
   </section>
   <section class="band" id="quote">
     <h2>Get a fixed price</h2>
-    <p>Your calculator answers come with the request, so the first call is about your site, not a form. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a> or <a href="tel:{PHONE2_TEL}">{PHONE2}</a>.</p>
+    <p>Your calculator answers come with the request, so the first call is about your site, not a form. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a>.</p>
     {quote_form("fitout-cost")}
   </section>
 {FOOT}
@@ -364,12 +363,12 @@ def about_page():
 def contact_page():
     p = PAGES[5]
     return head(p[2], p[3], p[1]) + f"""
-  <section class="hero"><div class="kick">Contact</div><h1>Tell us about the job.</h1><p>Send the address, the drawings if you have them and a line about what you need. We will come back within one business day to arrange a walk-through. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a> or <a href="tel:{PHONE2_TEL}">{PHONE2}</a>, Monday to Friday, 9am to 5pm, or weekends by appointment.</p></section>
+  <section class="hero"><div class="kick">Contact</div><h1>Tell us about the job.</h1><p>Send the address, the drawings if you have them and a line about what you need. We will come back within one business day to arrange a walk-through. Or ring <a href="tel:{PHONE_TEL}">{PHONE}</a>, Monday to Friday, 9am to 5pm, or weekends by appointment.</p></section>
   <section class="band">
     <div class="cols" style="grid-template-columns:1.3fr .7fr">
       <div>{quote_form("contact")}</div>
       <div>
-        <div class="card"><h3>Phone</h3><p><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="tel:{PHONE2_TEL}">{PHONE2}</a></p></div>
+        <div class="card"><h3>Phone</h3><p><a href="tel:{PHONE_TEL}">{PHONE}</a></p></div>
         <div class="card" style="margin-top:12px"><h3>Email</h3><p><a href="mailto:{EMAIL}">{EMAIL}</a></p></div>
         <div class="card" style="margin-top:12px"><h3>Office</h3><p>6 Ossary Street, Mascot NSW 2020</p></div>
         <div class="card" style="margin-top:12px"><h3>Hours</h3><p>Monday to Friday, 9am to 5pm; weekends by appointment</p></div>
@@ -380,7 +379,7 @@ def contact_page():
 {FOOT}"""
 
 THANKS = f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Thanks - City Fitouts</title><meta name="robots" content="noindex"><link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&display=swap" rel="stylesheet"><style>body{{font-family:Jost,system-ui,sans-serif;color:#2B3A49;max-width:640px;margin:80px auto;padding:0 20px;line-height:1.5}}h1{{color:#1E2C4F;font-weight:600}}a{{color:#1E2C4F}}</style>{GA}
-</head><body><h1>Thanks - we have it.</h1><p>City Fitouts will come back to you within one business day to arrange a walk-through and a fixed price. If it is urgent, ring <a href="tel:{PHONE_TEL}">{PHONE}</a> or <a href="tel:{PHONE2_TEL}">{PHONE2}</a>.</p><p><a href="/">Back to City Fitouts</a></p></body></html>
+</head><body><h1>Thanks - we have it.</h1><p>City Fitouts will come back to you within one business day to arrange a walk-through and a fixed price. If it is urgent, ring <a href="tel:{PHONE_TEL}">{PHONE}</a>.</p><p><a href="/">Back to City Fitouts</a></p></body></html>
 """
 
 CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney Fitouts). Navy only - no amber accent. */
