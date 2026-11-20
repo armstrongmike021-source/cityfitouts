@@ -7,8 +7,8 @@ DOMAIN = "https://cityfitouts.com.au"
 PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
 EMAIL = "info@cityfitouts.com.au"
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");gtag("config","G-GN84K201WK");</script>'
-ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -312 1596 1596'%3E%3Cpath d='M1596 973L549 973L1068 651Z M521 314L1035 0L990 596Z M0 15L520 315L468 930Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
-LOGO = """<svg viewBox="0 0 1596 973" aria-hidden="true"><path d="M1596 973L549 973L1068 651Z M521 314L1035 0L990 596Z M0 15L520 315L468 930Z" fill="#1E2C4F"/></svg>"""   # City Fitouts mark v2: the three triangles turned a quarter turn so the long triangle lies flat at bottom right (Mike approved 20 Nov 2026)
+ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -312 1596 1596'%3E%3Cpath d='M1596 973L549 973L1068 651Z M0 15L520 315L468 930Z' fill='%231E2C4F'/%3E%3Cpath d='M521 314L1035 0L990 596Z' fill='%239D3200'/%3E%3C/svg%3E">"""
+LOGO = """<svg viewBox="0 0 1596 973" aria-hidden="true"><path d="M1596 973L549 973L1068 651Z M0 15L520 315L468 930Z" fill="#1E2C4F"/><path d="M521 314L1035 0L990 596Z" fill="#9D3200"/></svg>"""   # City Fitouts mark v3: quarter-turned triangles, the middle one in terracotta red #9D3200 (Mike approved 20 Nov 2026)
 
 PAGES = [  # (file, clean url, title, description)
     ("index.html", "/", "City Fitouts - Commercial builders and fitout contractors, Sydney",
