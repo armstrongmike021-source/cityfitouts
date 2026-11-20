@@ -7,8 +7,8 @@ DOMAIN = "https://cityfitouts.com.au"
 PHONE = "0411 250 058"; PHONE_TEL = "0411250058"
 EMAIL = "info@cityfitouts.com.au"
 GA = '<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJ7DRJZG0"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-9XJ7DRJZG0");gtag("config","G-GN84K201WK");</script>'
-ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -298 1580 1580'%3E%3Cpath d='M1580 0L1103 932L1053 323Z M503 657L458 56L968 368Z M0 985L504 658L1028 985Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
-LOGO = """<svg viewBox="0 0 1580 985" aria-hidden="true"><path d="M1580 0L1103 932L1053 323Z M503 657L458 56L968 368Z M0 985L504 658L1028 985Z" fill="#1E2C4F"/></svg>"""   # City Fitouts mark: the three triangles turned 27 degrees clockwise so the base sits flat (Mike approved 20 Nov 2026)
+ICON = """<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -312 1596 1596'%3E%3Cpath d='M1596 973L549 973L1068 651Z M521 314L1035 0L990 596Z M0 15L520 315L468 930Z' fill='%231E2C4F'/%3E%3C/svg%3E">"""
+LOGO = """<svg viewBox="0 0 1596 973" aria-hidden="true"><path d="M1596 973L549 973L1068 651Z M521 314L1035 0L990 596Z M0 15L520 315L468 930Z" fill="#1E2C4F"/></svg>"""   # City Fitouts mark v2: the three triangles turned a quarter turn so the long triangle lies flat at bottom right (Mike approved 20 Nov 2026)
 
 PAGES = [  # (file, clean url, title, description)
     ("index.html", "/", "City Fitouts - Commercial builders and fitout contractors, Sydney",
@@ -49,7 +49,7 @@ def head(title, desc, url, extra=""):
 <body>
 <div class="wrap">
   <header class="top">
-    <a class="brand" href="/">{LOGO}<b>City<br>Fitouts</b></a>
+    <a class="brand" href="/">{LOGO}<b><span class="c1">City</span><br>Fitouts</b></a>
     <nav><a href="/office-fitouts-sydney">Office</a><a href="/retail-fitouts-sydney">Retail</a><a href="/cafe-restaurant-fitouts-sydney">Cafe</a><a href="/food-court-fitouts-sydney">Food court</a><a href="/pharmacy-fitouts-sydney">Pharmacy</a><a href="/gym-fitouts-sydney">Gym</a><a href="/medical-fitouts-sydney">Medical</a><a href="/childcare-fitouts-sydney">Childcare</a><a href="/our-projects">Projects</a><a class="cta" href="/fitout-cost#calc">Get a fixed price</a></nav>
   </header>
 """
@@ -389,7 +389,7 @@ CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney 
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
 .btn.amber{background:var(--navy)}
-header.top .brand b{font-size:30px;line-height:27px;display:block;margin-top:-3px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:40px;flex:none}header.top .brand{flex:none}header.top nav{white-space:nowrap}nav a{margin-left:15px}nav a.cta{display:inline-block;white-space:nowrap}@media(max-width:1080px){nav a{margin-left:11px;font-size:15px}}@media(max-width:900px){nav a{margin-left:10px;font-size:14px}nav a.cta{display:none}}@media(max-width:640px){header.top nav{white-space:normal}nav a{margin:0 12px 0 0}}
+header.top .brand b{font-size:24px;line-height:24px;display:block;margin-top:4px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:54px;flex:none}header.top .brand{flex:none}header.top .brand b .c1{position:relative;left:-32px;color:inherit}header.top nav{white-space:nowrap}nav a{margin-left:15px}nav a.cta{display:inline-block;white-space:nowrap}@media(max-width:1080px){nav a{margin-left:11px;font-size:15px}}@media(max-width:900px){nav a{margin-left:10px;font-size:14px}nav a.cta{display:none}}@media(max-width:640px){header.top nav{white-space:normal}nav a{margin:0 12px 0 0}}
 .hero{padding:30px 0 10px}.hero h1{max-width:760px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:820px){.steps,.steps.four{grid-template-columns:1fr}}

@@ -30,6 +30,7 @@ deploys from this repo (branch main, publish "."), so a push to main is a deploy
   so the two sites do not cannibalise each other.
 - Domain redirects wanted: quotefitout.com, fitoutquote.com, glasswallschildcare.com, glasswallsdaycare.com and
   cityfitouts.com all to cityfitouts.com.au (and lotchecker.com.au to blockchecker.com.au).
-- Logo (20 Nov 2026, Mike approved): the header mark and tab icon are the three triangles turned 27 degrees clockwise so
-  the base sits flat - City Fitouts' own mark, not the Estier one. The site stays NEUTRAL: it serves both Republic
+- Logo v2 (20 Nov 2026, Mike approved): the header mark and tab icon are the three triangles turned a quarter turn so
+  the long triangle lies flat at bottom right, with the word City shifted 32px left (mark 54px tall, name 24px) so it tucks in beside the upper
+  triangle (`.c1`). City Fitouts' own mark, not the Estier one. The site stays NEUTRAL: it serves both Republic
   Design Build and Estier, so neither is named on it.
