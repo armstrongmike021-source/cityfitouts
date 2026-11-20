@@ -209,7 +209,7 @@ def home():
   <section class="hero split">
     <div>
       <div class="kick">Commercial builders, Sydney</div>
-      <h1>28-day Commercial Builds and Fitouts or $5000 per day paid to you*</h1>
+      <h1>28-day Commercial Builds and Fitouts <span class="h1sub">or $5000 per day paid to you<sup>*</sup></span></h1>
       <p>City Fitouts builds offices, shops, cafes and restaurants, medical rooms and childcare centres across Sydney. Fixed price, fixed program, one site manager from the first day to handover.</p>
       <p><a class="btn" href="#checker">Get a fixed price</a> &nbsp; <a class="textlink" href="#checker">Check what your fitout will cost &rarr;</a></p>
     </div>
@@ -390,7 +390,7 @@ nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
 .btn.amber{background:var(--navy)}
 header.top .brand b{font-size:24px;line-height:24px;display:block;margin-top:4px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:54px;flex:none}header.top .brand{flex:none}header.top .brand b .c1{position:relative;left:-32px;color:inherit}header.top nav{white-space:nowrap}nav a{margin-left:15px}nav a.cta{display:inline-block;white-space:nowrap}@media(max-width:1080px){nav a{margin-left:11px;font-size:15px}}@media(max-width:900px){nav a{margin-left:10px;font-size:14px}nav a.cta{display:none}}@media(max-width:640px){header.top nav{white-space:normal}nav a{margin:0 12px 0 0}}
-.hero{padding:30px 0 10px}.hero h1{max-width:760px}
+.hero{padding:30px 0 10px}.hero h1{max-width:760px}.hero h1 .h1sub{display:block;font-size:.58em;line-height:1.2;margin-top:10px}.hero h1 .h1sub sup{font-size:.4em;vertical-align:super;margin-left:2px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:820px){.steps,.steps.four{grid-template-columns:1fr}}
 .steps .num{font-size:13px;letter-spacing:.14em;color:var(--muted);font-weight:600}
