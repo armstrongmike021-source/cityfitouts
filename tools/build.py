@@ -382,9 +382,12 @@ THANKS = f"""<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta
 </head><body><h1>Thanks - we have it.</h1><p>City Fitouts will come back to you within one business day to arrange a walk-through and a fixed price. If it is urgent, ring <a href="tel:{PHONE_TEL}">{PHONE}</a>.</p><p><a href="/">Back to City Fitouts</a></p></body></html>
 """
 
-CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney Fitouts). Navy only - no amber accent. */
-:root{--amber:#1E2C4F}
-.kick{color:var(--navy);margin-bottom:22px}
+CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney Fitouts). Navy, with the logo's terracotta red used sparingly: small labels, asterisks, accent bars, link hover. Buttons and headings stay navy. */
+:root{--amber:#1E2C4F;--red:#9D3200}
+.kick{color:var(--red);margin-bottom:22px}
+.appr{border-left-color:var(--red)}.ref{border-left-color:var(--red)}
+.hero h1 .h1sub sup,.fine .star{color:var(--red)}
+.textlink:hover,footer a:hover{color:var(--red)}
 .textlink{color:var(--navy)}
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
@@ -408,7 +411,7 @@ header.top .brand b{font-size:24px;line-height:24px;display:block;margin-top:4px
 
 def main():
     os.chdir(ROOT)
-    out = {"index.html": home().replace('<p class="fine">Cost ranges', '<p class="fine">* only for sites that are DA or CDC approved and ready to go.</p>\n    <p class="fine">Cost ranges', 1), "our-projects.html": projects_page(), "commercial-fitouts-sydney.html": fitouts_page(),
+    out = {"index.html": home().replace('<p class="fine">Cost ranges', '<p class="fine"><span class="star">*</span> only for sites that are DA or CDC approved and ready to go.</p>\n    <p class="fine">Cost ranges', 1), "our-projects.html": projects_page(), "commercial-fitouts-sydney.html": fitouts_page(),
            "fitout-cost.html": cost_page(), "about.html": about_page(), "contact.html": contact_page(), "thanks.html": THANKS,
            "city.css": CITY_CSS}
     for f, s in out.items():

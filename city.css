@@ -1,6 +1,9 @@
-/* City Fitouts additions on top of style.css (shared with Sydney Fitouts). Navy only - no amber accent. */
-:root{--amber:#1E2C4F}
-.kick{color:var(--navy);margin-bottom:22px}
+/* City Fitouts additions on top of style.css (shared with Sydney Fitouts). Navy, with the logo's terracotta red used sparingly: small labels, asterisks, accent bars, link hover. Buttons and headings stay navy. */
+:root{--amber:#1E2C4F;--red:#9D3200}
+.kick{color:var(--red);margin-bottom:22px}
+.appr{border-left-color:var(--red)}.ref{border-left-color:var(--red)}
+.hero h1 .h1sub sup,.fine .star{color:var(--red)}
+.textlink:hover,footer a:hover{color:var(--red)}
 .textlink{color:var(--navy)}
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
