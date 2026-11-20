@@ -50,7 +50,7 @@ def head(title, desc, url, extra=""):
 <div class="wrap">
   <header class="top">
     <a class="brand" href="/">{LOGO}<b><span class="c1">City</span><br>Fitouts</b></a>
-    <nav><a href="/office-fitouts-sydney">Office</a><a href="/retail-fitouts-sydney">Retail</a><a href="/cafe-restaurant-fitouts-sydney">Cafe</a><a href="/food-court-fitouts-sydney">Food court</a><a href="/pharmacy-fitouts-sydney">Pharmacy</a><a href="/gym-fitouts-sydney">Gym</a><a href="/medical-fitouts-sydney">Medical</a><a href="/childcare-fitouts-sydney">Childcare</a><a href="/our-projects">Projects</a><a class="cta" href="/fitout-cost#calc">Get a fixed price</a></nav>
+    <nav><a href="/office-fitouts-sydney">Office</a><a href="/retail-fitouts-sydney">Retail</a><a href="/cafe-restaurant-fitouts-sydney">Cafe</a><a href="/food-court-fitouts-sydney">Food court</a><a href="/pharmacy-fitouts-sydney">Pharmacy</a><a href="/gym-fitouts-sydney">Gym</a><a href="/medical-fitouts-sydney">Medical</a><a href="/childcare-fitouts-sydney">Childcare</a><a href="/our-projects">Projects</a><a href="/contact">Contact</a><a class="cta" href="/fitout-cost#calc">Get a fixed price</a></nav>
   </header>
 """
 
@@ -58,7 +58,7 @@ FOOT = f"""
   <footer>
     <div class="fcols">
       <div><b>City Fitouts</b><br>Commercial builders and fitout contractors, Sydney.<br>Fitouts, alterations and refurbishments for tenants, landlords and their architects.</div>
-      <div><b>Talk to us</b><br>6 Ossary Street, Mascot NSW 2020<br>Mon - Fri 9am - 5pm, weekends by appointment<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></div>
+      <div><b>Talk to us</b><br>6 Ossary Street, Mascot NSW 2020<br>Mon - Fri 9am - 5pm, weekends by appointment<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a><br><a href="/about">About</a> · <a href="/contact">Contact</a></div>
     </div>
     <p class="fine">Cost ranges on this site are a guide only; every job is priced after a walk-through.</p>
   </footer>
@@ -386,12 +386,13 @@ CITY_CSS = """/* City Fitouts additions on top of style.css (shared with Sydney 
 .kick{color:var(--red);margin-bottom:22px}
 .appr{border-left-color:var(--red)}.ref{border-left-color:var(--red)}
 .hero h1 .h1sub sup,.fine .star{color:var(--red)}
-.textlink:hover,footer a:hover{color:var(--red)}
-.textlink{color:var(--navy)}
+.textlink{color:var(--red)}.textlink:hover{color:var(--navy)}footer a:hover{color:var(--red)}
+section h2,h2{color:var(--red)}
+
 nav a.cta{background:var(--navy)}
 .appr{border-left-color:var(--navy)}
 .btn.amber{background:var(--navy)}
-header.top .brand b{font-size:24px;line-height:24px;display:block;margin-top:4px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:54px;flex:none}header.top .brand{flex:none}header.top .brand b .c1{position:relative;left:-32px;color:inherit}header.top nav{white-space:nowrap}nav a{margin-left:15px}nav a.cta{display:inline-block;white-space:nowrap}@media(max-width:1080px){nav a{margin-left:11px;font-size:15px}}@media(max-width:900px){nav a{margin-left:10px;font-size:14px}nav a.cta{display:none}}@media(max-width:640px){header.top nav{white-space:normal}nav a{margin:0 12px 0 0}}
+header.top .brand b{font-size:24px;line-height:24px;display:block;margin-top:4px}.hero p{margin:0 0 14px}.hero p:last-child{margin-top:26px}header.top .brand svg{width:auto;height:54px;flex:none}header.top .brand{flex:none}header.top .brand b .c1{position:relative;left:-32px;color:inherit}header.top nav{white-space:nowrap}nav a{margin-left:15px}nav a.cta{display:inline-block;white-space:nowrap}@media(max-width:1080px){nav a{margin-left:11px;font-size:15px}}@media(max-width:1000px){nav a{margin-left:10px;font-size:14px}nav a.cta{display:none}}@media(max-width:820px){nav a{margin-left:8px;font-size:13px}}@media(max-width:720px){header.top nav{white-space:normal}nav a{margin:0 12px 0 0;font-size:14px}}
 .hero{padding:30px 0 10px}.hero h1{max-width:760px}.hero h1 .h1sub{display:block;font-size:.58em;line-height:1.2;margin-top:10px}.hero h1 .h1sub sup{font-size:.4em;vertical-align:super;margin-left:2px}
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.steps.four{grid-template-columns:repeat(4,1fr)}
 @media(max-width:820px){.steps,.steps.four{grid-template-columns:1fr}}

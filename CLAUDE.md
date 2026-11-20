@@ -11,7 +11,8 @@ deploys from this repo (branch main, publish "."), so a push to main is a deploy
   It also writes `_redirects`, `sitemap.xml` and `robots.txt`. Edit copy in build.py, run `python3 tools/build.py`.
   Never edit the .html. The build asserts no page contains "design &", "design and construct", "Republic" or "Trevor".
 - `style.css` is the Sydney Fitouts stylesheet; `city.css` overrides it (navy only, no amber accent, steps, projects,
-  footer columns). Jost for all text.
+  footer columns). Jost for all text. Colour (20 Nov 2026): navy plus the logo's terracotta red `--red:#9D3200` on
+  small labels, section h2 headings, the cost text link, asterisks and accent bars. Headline, buttons, menu and body stay navy.
 - Calculator (`CALC` / `CALC_JS` in build.py): same RATES/WEEKS as sydneyfitouts.com, all-in design-and-construct,
   shown as Construction / Design (your architect or designer) / Approvals. Mike put the design row BACK (2 Nov 2026)
   because the design fee may go to the architect who referred the job. The section id is `checker`, NOT `cost` -
@@ -34,3 +35,5 @@ deploys from this repo (branch main, publish "."), so a push to main is a deploy
   the long triangle lies flat at bottom right, with the word City shifted 32px left (mark 54px tall, name 24px) so it tucks in beside the upper
   triangle (`.c1`). City Fitouts' own mark, not the Estier one. The site stays NEUTRAL: it serves both Republic
   Design Build and Estier, so neither is named on it.
+- Menu and footer (20 Nov 2026): Contact sits in the top menu before the Get a fixed price button. The footer has no Pages
+  column; About and Contact are small links under Talk to us. /commercial-fitouts-sydney is no longer linked from any page.
