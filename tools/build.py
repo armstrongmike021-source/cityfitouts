@@ -59,7 +59,6 @@ FOOT = f"""
     <div class="fcols">
       <div><b>City Fitouts</b><br>Commercial builders and fitout contractors, Sydney.<br>Fitouts, alterations and refurbishments for tenants, landlords and their architects.</div>
       <div><b>Talk to us</b><br>6 Ossary Street, Mascot NSW 2020<br>Mon - Fri 9am - 5pm, weekends by appointment<br><a href="tel:{PHONE_TEL}">{PHONE}</a><br><a href="mailto:{EMAIL}">{EMAIL}</a></div>
-      <div><b>Pages</b><br><a href="/commercial-fitouts-sydney">Commercial fitouts</a><br><a href="/office-fitouts-sydney">Office</a> · <a href="/retail-fitouts-sydney">Retail</a> · <a href="/cafe-restaurant-fitouts-sydney">Cafe</a> · <a href="/food-court-fitouts-sydney">Food court</a> · <a href="/pharmacy-fitouts-sydney">Pharmacy</a> · <a href="/gym-fitouts-sydney">Gym</a> · <a href="/medical-fitouts-sydney">Medical</a> · <a href="/childcare-fitouts-sydney">Childcare</a><br><a href="/our-projects">Projects</a><br><a href="/fitout-cost">Fitout cost</a><br><a href="/about">About</a><br><a href="/contact">Contact</a></div>
     </div>
     <p class="fine">Cost ranges on this site are a guide only; every job is priced after a walk-through.</p>
   </footer>
